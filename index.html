@@ -196,8 +196,9 @@
     }
 
     .site-nav__link[aria-current="location"] {
-      background: var(--text);
-      color: var(--white);
+      background: var(--surface-strong);
+      color: var(--text);
+      box-shadow: inset 0 0 0 1px var(--line);
     }
 
     .site-nav__link:hover {
@@ -207,6 +208,18 @@
     .site-nav__arrow {
       font-size: 0.82rem;
       transform: translateY(-1px);
+    }
+
+    .site-nav__link--resume,
+    .site-nav__link--resume:hover {
+      background: var(--text);
+      color: var(--white);
+      font-weight: 800;
+      box-shadow: 0 7px 20px rgba(92, 92, 92, 0.28);
+    }
+
+    .site-nav__link--resume:hover {
+      transform: translateY(-2px);
     }
 
     main {
@@ -303,7 +316,7 @@
 
     .hero__intro {
       padding-top: clamp(24px, 3vw, 38px);
-      border-top: 1px solid var(--line);
+      /* border-top: 1px solid var(--line); */
     }
 
     .hero__role {
@@ -377,7 +390,7 @@
     }
 
     .section-heading h2 {
-      max-width: 900px;
+      /* max-width: 900px; */
       margin: -0.12em 0 0;
       font-size: clamp(2.6rem, 4.6vw, 4.8rem);
       font-weight: 500;
@@ -385,50 +398,36 @@
       line-height: 0.9;
     }
 
-    .skills-grid {
+    .skills-list {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      column-gap: clamp(28px, 4vw, 56px);
       margin: 0;
       padding: 0;
-      border-top: 1px solid var(--line-strong);
-      border-left: 1px solid var(--line-strong);
       list-style: none;
     }
 
-    .skill-card {
-      min-height: 92px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 16px;
-      padding: 15px;
-      border-right: 1px solid var(--line-strong);
-      border-bottom: 1px solid var(--line-strong);
-      background: rgba(255, 255, 255, 0.3);
-      transition: background-color 260ms ease, transform 260ms var(--ease);
-    }
-
-    .skill-card:hover {
+    .skills-list li {
       position: relative;
-      z-index: 1;
-      background: var(--white);
-      transform: translateY(-4px);
-    }
-
-    .skill-card__number {
-      color: var(--text-faint);
-      font-size: 0.65rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-    }
-
-    .skill-card h3 {
-      max-width: 250px;
-      margin: 0;
-      font-size: clamp(0.78rem, 1vw, 0.95rem);
+      min-width: 0;
+      padding: 11px 0 11px 17px;
+      border-bottom: 1px solid var(--line);
+      font-size: clamp(0.8rem, 0.95vw, 0.92rem);
       font-weight: 600;
-      letter-spacing: -0.03em;
-      line-height: 1.25;
+      letter-spacing: -0.015em;
+      line-height: 1.4;
+    }
+
+    .skills-list li::before {
+      position: absolute;
+      top: 50%;
+      left: 1px;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--text);
+      content: "";
+      transform: translateY(-50%);
     }
 
     .experience-note {
@@ -436,12 +435,12 @@
     }
 
     .experience-note__copy {
-      max-width: 530px;
+      max-width: 560px;
       margin: 0;
-      font-size: clamp(1rem, 1.45vw, 1.3rem);
-      font-weight: 500;
-      letter-spacing: -0.025em;
-      line-height: 1.6;
+      font-size: clamp(0.88rem, 1vw, 1rem);
+      font-weight: 400;
+      letter-spacing: -0.012em;
+      line-height: 1.72;
     }
 
     .work {
@@ -451,12 +450,14 @@
     }
 
     .work .section-heading {
+      display: block;
       margin-bottom: clamp(38px, 5vw, 62px);
+      text-align: center;
     }
 
     .work__intro {
       max-width: 650px;
-      margin: 22px 0 0;
+      margin: 22px auto 0;
       color: var(--text-soft);
       font-size: clamp(0.95rem, 1.25vw, 1.1rem);
       line-height: 1.75;
@@ -723,14 +724,6 @@
         font-size: clamp(2.65rem, 12vw, 4rem);
       }
 
-      .skills-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-
-      .skill-card {
-        min-height: 84px;
-      }
-
       .work-grid {
         grid-template-columns: 1fr;
         gap: 24px;
@@ -760,9 +753,13 @@
         display: none;
       }
 
-      .skill-card {
-        min-height: 82px;
-        padding: 12px;
+      .skills-list {
+        column-gap: 20px;
+      }
+
+      .skills-list li {
+        padding-left: 14px;
+        font-size: 0.78rem;
       }
     }
 
@@ -802,7 +799,7 @@
       <li><a class="site-nav__link" href="#work" data-section-link>Work</a></li>
       <li>
         <a class="site-nav__link site-nav__link--resume" href="Erik_Rosas_Resume.pdf" target="_blank" rel="noopener noreferrer">
-          Résumé <span class="site-nav__arrow" aria-hidden="true">↗</span><span class="sr-only"> (opens a PDF in a new tab)</span>
+          Resume <span class="site-nav__arrow" aria-hidden="true">↗</span><span class="sr-only"> (opens a PDF in a new tab)</span>
         </a>
       </li>
     </ul>
@@ -811,17 +808,17 @@
   <main id="main-content" tabindex="-1">
     <section class="hero" id="home" aria-labelledby="hero-title">
       <div class="section-shell">
-        <div class="hero__topline reveal">
-          <!-- <p class="section-marker">01 / 03 — Introduction</p> 
-          <p class="hero__location">Creative developer based in Mexico</p>-->
-        </div>
+        <!--<div class="hero__topline reveal">
+           <p class="section-marker">01 / 03 — Introduction</p>
+          <p class="hero__location">Creative developer based in Mexico</p>
+        </div>-->
 
         <div class="hero__content">
           <h1 id="hero-title" class="reveal">Erik <span>Rosas</span></h1>
           <div class="hero__intro reveal">
             <p class="hero__role">Creative Developer.</p>
             <p class="hero__summary">
-              5+ years in AdTech building interactive Rich Media for international brands. Front-end development, graphic design, and animation.
+              Hybrid Creative Developer with over 5 years of experience bridging technical execution and visual design in the AdTech industry
             </p>
             <!-- <a class="hero__next" href="#skills">Explore expertise <span aria-hidden="true">↓</span></a> -->
           </div>
@@ -835,39 +832,17 @@
           <div class="expertise-column expertise-column--skills">
             <!-- <p class="section-marker reveal">02 / 03 — Expertise</p> -->
             <h2 id="skills-title" class="reveal">Skills</h2>
-            <ul class="skills-grid" aria-label="Core skills">
-              <li class="skill-card reveal">
-                <span class="skill-card__number" aria-hidden="true">01</span>
-                <h3>HTML</h3>
-              </li>
-              <li class="skill-card reveal">
-                <span class="skill-card__number" aria-hidden="true">02</span>
-                <h3>JavaScript</h3>
-              </li>
-              <li class="skill-card reveal">
-                <span class="skill-card__number" aria-hidden="true">03</span>
-                <h3>CSS</h3>
-              </li>
-              <li class="skill-card reveal">
-                <span class="skill-card__number" aria-hidden="true">04</span>
-                <h3>GSAP / GreenSock</h3>
-              </li>
-              <li class="skill-card reveal">
-                <span class="skill-card__number" aria-hidden="true">05</span>
-                <h3>Dynamic Content Optimization</h3>
-              </li>
-              <li class="skill-card reveal">
-                <span class="skill-card__number" aria-hidden="true">06</span>
-                <h3>REST APIs</h3>
-              </li>
-              <li class="skill-card reveal">
-                <span class="skill-card__number" aria-hidden="true">07</span>
-                <h3>Adobe Creative Cloud</h3>
-              </li>
-              <li class="skill-card reveal">
-                <span class="skill-card__number" aria-hidden="true">08</span>
-                <h3>Gamification</h3>
-              </li>
+            <ul class="skills-list" aria-label="Core skills">
+              <li class="reveal">HTML</li>
+              <li class="reveal">JavaScript</li>
+              <li class="reveal">CSS</li>
+              <li class="reveal">GSAP / GreenSock</li>
+              <li class="reveal">Dynamic Content Optimization</li>
+              <li class="reveal">REST APIs</li>
+              <li class="reveal">Adobe Creative Cloud</li>
+              <li class="reveal">Gamification</li>
+              <li class="reveal">Data Analysis</li>
+              <li class="reveal">Python</li>
             </ul>
           </div>
 
@@ -876,7 +851,7 @@
             <h2 id="experience-title" class="reveal">Experience</h2>
             <div class="experience-note reveal">
               <p class="experience-note__copy">
-                I have worked on digital campaign production for global brands, adapting creative assets into interactive experiences under real timelines, specifications, feedback cycles, and QA standards.
+                I combine elite visual design (Adobe Creative Cloud) with hard technical execution (HTML5, JS, REST APIs, DCO) to build dynamic programmatic campaigns. Leveraging Python for data processing and analysis, I turn data-driven insights into pixel-perfect advertising experiences.
               </p>
             </div>
           </div>
