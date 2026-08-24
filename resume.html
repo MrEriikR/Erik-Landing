@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Erik Rosas — Résumé</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    @page {
+      size: A4;
+      margin: 0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #eeeeea;
+      color: #5c5c5c;
+      font-family: "Montserrat", Arial, sans-serif;
+      font-size: 9.5pt;
+      line-height: 1.55;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 0 auto;
+      padding: 18mm;
+      background: #ffffff;
+    }
+
+    .header {
+      display: grid;
+      grid-template-columns: 1.35fr 0.65fr;
+      gap: 12mm;
+      align-items: end;
+      padding-bottom: 11mm;
+      border-bottom: 1px solid rgba(92, 92, 92, 0.28);
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 35pt;
+      font-weight: 600;
+      letter-spacing: -0.06em;
+      line-height: 0.9;
+    }
+
+    .role {
+      margin: 4mm 0 0;
+      font-size: 14pt;
+      font-weight: 500;
+      letter-spacing: -0.03em;
+    }
+
+    .contact {
+      margin: 0;
+      font-size: 8.5pt;
+      line-height: 1.8;
+      text-align: right;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 0.62fr 1.38fr;
+      gap: 12mm;
+      padding-top: 11mm;
+    }
+
+    section + section {
+      margin-top: 9mm;
+    }
+
+    h2 {
+      margin: 0 0 4mm;
+      font-size: 8pt;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 11pt;
+      font-weight: 600;
+      letter-spacing: -0.025em;
+      line-height: 1.3;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    .muted {
+      color: rgba(92, 92, 92, 0.72);
+    }
+
+    .skill-list,
+    .project-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .skill-list {
+      display: grid;
+      gap: 2.1mm;
+    }
+
+    .skill-list li {
+      padding-bottom: 2.1mm;
+      border-bottom: 1px solid rgba(92, 92, 92, 0.16);
+      font-size: 8.8pt;
+      font-weight: 500;
+    }
+
+    .experience-item {
+      padding-left: 5mm;
+      border-left: 1px solid rgba(92, 92, 92, 0.32);
+    }
+
+    .experience-meta {
+      margin: 1.5mm 0 3mm;
+      color: rgba(92, 92, 92, 0.68);
+      font-size: 8pt;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .project-list {
+      display: grid;
+      gap: 3.5mm;
+    }
+
+    .project-list li {
+      padding-bottom: 3.5mm;
+      border-bottom: 1px solid rgba(92, 92, 92, 0.16);
+    }
+
+    .project-list strong {
+      display: block;
+      font-size: 9.5pt;
+      font-weight: 600;
+    }
+
+    .project-list span {
+      display: block;
+      margin-top: 1mm;
+      color: rgba(92, 92, 92, 0.7);
+      font-size: 8.2pt;
+    }
+
+    .footer {
+      margin-top: 11mm;
+      padding-top: 4mm;
+      border-top: 1px solid rgba(92, 92, 92, 0.28);
+      color: rgba(92, 92, 92, 0.65);
+      font-size: 7.5pt;
+      letter-spacing: 0.08em;
+      text-align: right;
+      text-transform: uppercase;
+    }
+
+    @media print {
+      body {
+        background: #ffffff;
+      }
+
+      .page {
+        margin: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="header">
+      <div>
+        <h1>Erik Rosas</h1>
+        <p class="role">Creative Developer</p>
+      </div>
+      <p class="contact">
+        Querétaro, Mexico<br>
+        <a href="mailto:e.22.rosas@gmail.com">e.22.rosas@gmail.com</a><br>
+        <a href="https://www.linkedin.com/in/mreriikr/">linkedin.com/in/mreriikr</a>
+      </p>
+    </header>
+
+    <div class="layout">
+      <aside>
+        <section>
+          <h2>Profile</h2>
+          <p>Creative developer with 5+ years in AdTech building interactive Rich Media for international brands. I combine front-end development, graphic design, and animation to deliver polished digital experiences.</p>
+        </section>
+
+        <section>
+          <h2>Skills</h2>
+          <ul class="skill-list">
+            <li>HTML</li>
+            <li>JavaScript</li>
+            <li>CSS</li>
+            <li>GSAP / GreenSock</li>
+            <li>Dynamic Content Optimization</li>
+            <li>REST APIs</li>
+            <li>Adobe Creative Cloud</li>
+            <li>Gamification</li>
+          </ul>
+        </section>
+      </aside>
+
+      <div>
+        <section>
+          <h2>Experience</h2>
+          <article class="experience-item">
+            <h3>Creative Developer — GumGum</h3>
+            <p class="experience-meta">2021 — 2026 · Digital Campaign Production</p>
+            <p class="muted">Build interactive digital campaigns for global brands, adapt creative assets into responsive Rich Media, and deliver within production timelines, technical specifications, feedback cycles, and QA standards.</p>
+          </article>
+        </section>
+
+        <section>
+          <h2>Selected Work</h2>
+          <ul class="project-list">
+            <li>
+              <strong>Sauvage Parfum Dior</strong>
+              <span>Interactive ad development, animation, responsive behavior, and preview delivery.</span>
+            </li>
+            <li>
+              <strong>Disney+ Dear Killer Nannies</strong>
+              <span>Creative execution, motion timing, image optimization, and platform-specific behavior.</span>
+            </li>
+            <li>
+              <strong>Adobe Photoshop Monster Makeover</strong>
+              <span>Interactive execution transforming static creative assets into a client-ready experience.</span>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Focus</h2>
+          <p class="muted">Interactive advertising · Rich Media · Front-end development · Motion and animation · Responsive production · Creative adaptation · Quality assurance</p>
+        </section>
+      </div>
+    </div>
+
+    <p class="footer">Erik Rosas · Creative Development Portfolio · 2026</p>
+  </main>
+</body>
+</html>
