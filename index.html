@@ -605,6 +605,54 @@
       border-color: var(--text);
     }
 
+    .other-projects {
+      margin-top: clamp(64px, 7vw, 96px);
+      padding-top: clamp(30px, 4vw, 46px);
+      border-top: 1px solid var(--line);
+      text-align: center;
+    }
+
+    .other-projects h3 {
+      margin: 0;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .other-projects__list {
+      max-width: 900px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px 24px;
+      margin: 22px auto 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .other-projects__list a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding-bottom: 3px;
+      border-bottom: 1px solid var(--line);
+      color: var(--text-soft);
+      font-size: 0.72rem;
+      font-weight: 600;
+      transition: border-color 220ms ease, color 220ms ease;
+    }
+
+    .other-projects__list a::after {
+      content: "↗";
+      font-size: 0.76rem;
+    }
+
+    .other-projects__list a:hover {
+      border-color: var(--text);
+      color: var(--text);
+    }
+
     .site-footer {
       padding: 30px 24px;
       border-top: 1px solid var(--line);
@@ -875,56 +923,54 @@
           <article class="work-card reveal">
             <figure class="work-card__media">
               <picture>
-                <source media="(prefers-reduced-motion: reduce)" srcset="assets/work/dior-sauvage-poster.png">
-                <img src="assets/work/dior-sauvage.gif" alt="Abstract dark glass and liquid visual created for the Sauvage Parfum Dior project card" width="600" height="400" loading="lazy" decoding="async">
+                <source media="(prefers-reduced-motion: reduce)" srcset="assets/work/orlando-poster.png">
+                <img src="assets/work/orlando.gif" alt="Abstract dark glass and liquid visual created for the Sauvage Parfum Dior project card" width="600" height="400" loading="lazy" decoding="async">
               </picture>
-              <figcaption class="work-card__index">01 / Rich Media</figcaption>
+              <figcaption class="work-card__index">Rich Media</figcaption>
             </figure>
             <div class="work-card__body">
-              <h3>Sauvage Parfum Dior</h3>
+              <h3>Universal Orlando Resort</h3>
               <ul class="work-card__tools" aria-label="Tools used">
-                <li>HTML</li>
-                <li>CSS</li>
+                <li>Tumult Hype</li>
                 <li>JavaScript</li>
-                <li>GSAP</li>
+                <li>Timeline animation</li>
               </ul>
               <p class="work-card__description">
-                Interactive ad build focused on animation, layout adaptation, responsive behavior, and client-ready preview delivery.
+                This horizontal expandable rich media ad for Universal Orlando Resort begins as a compact banner and expands into a larger, more immersive canvas upon interaction.
               </p>
-              <a class="work-card__link" href="https://preview.partners.gumgum.com/165468" target="_blank" rel="noopener noreferrer" aria-label="Open the Sauvage Parfum Dior campaign in a new tab">Open campaign</a>
+              <a class="work-card__link" href="https://c.ggops.com/adbuilder/demos/51652/1778022521988_ad.html" target="_blank" rel="noopener noreferrer" aria-label="Open the Sauvage Parfum Dior campaign in a new tab">Open campaign</a>
             </div>
           </article>
 
           <article class="work-card reveal">
             <figure class="work-card__media">
               <picture>
-                <source media="(prefers-reduced-motion: reduce)" srcset="assets/work/disney-dear-killer-nannies-poster.png">
-                <img src="assets/work/disney-dear-killer-nannies.gif" alt="Cinematic hallway visual created for the Dear Killer Nannies project card" width="600" height="400" loading="lazy" decoding="async">
+                <source media="(prefers-reduced-motion: reduce)" srcset="assets/work/utz-poster.png">
+                <img src="assets/work/utz.gif" alt="Cinematic hallway visual created for the UTZ Ripples - Crunch & Flavor project card" width="600" height="400" loading="lazy" decoding="async">
               </picture>
-              <figcaption class="work-card__index">02 / Desktop + Mobile</figcaption>
+              <figcaption class="work-card__index">Display Interactive</figcaption>
             </figure>
             <div class="work-card__body">
-              <h3>Disney+ Dear Killer Nannies</h3>
+              <h3>UTZ Ripples - Crunch & Flavor</h3>
               <ul class="work-card__tools" aria-label="Tools used">
-                <li>HTML</li>
-                <li>CSS</li>
+                <li>Tumult Hype</li>
                 <li>JavaScript</li>
-                <li>Rich Media</li>
+                <li>Timeline animation</li>
               </ul>
               <p class="work-card__description">
-                Client-facing preview built to showcase creative execution, motion timing, image optimization, and platform-specific behavior.
+                This expandable rich media ad for Utz Ripples features a drag-based interaction that invites users to actively engage with the creative. As the user moves the draggable element, the banner dynamically changes color, creating an immediate visual response.
               </p>
-              <a class="work-card__link" href="https://preview.partners.gumgum.com/174415" target="_blank" rel="noopener noreferrer" aria-label="Open the Disney Plus Dear Killer Nannies campaign in a new tab">Open campaign</a>
+              <a class="work-card__link" href="https://c.ggops.com/adbuilder/demos/80410/1778022749371_ad.html" target="_blank" rel="noopener noreferrer" aria-label="Open the Disney Plus Dear Killer Nannies campaign in a new tab">Open campaign</a>
             </div>
           </article>
 
           <article class="work-card reveal">
             <figure class="work-card__media">
               <picture>
-                <source media="(prefers-reduced-motion: reduce)" srcset="assets/work/adobe-monster-makeover-poster.png">
-                <img src="assets/work/adobe-monster-makeover.gif" alt="Colorful mixed-media creature visual created for the Monster Makeover project card" width="600" height="400" loading="lazy" decoding="async">
+                <source media="(prefers-reduced-motion: reduce)" srcset="assets/work/adobe.png">
+                <img src="assets/work/adobe.gif" alt="Colorful mixed-media creature visual created for the Monster Makeover project card" width="600" height="400" loading="lazy" decoding="async">
               </picture>
-              <figcaption class="work-card__index">03 / Interactive</figcaption>
+              <figcaption class="work-card__index">Desktop Skin Interactive</figcaption>
             </figure>
             <div class="work-card__body">
               <h3>Adobe Photoshop Monster Makeover</h3>
@@ -935,11 +981,28 @@
                 <li>GSAP</li>
               </ul>
               <p class="work-card__description">
-                Ad experience built from supplied assets, turning static creative into a polished interactive unit ready for review.
+                This interactive desktop skin for Adobe Photoshop was created to showcase the early capabilities of Photoshop's generative AI. The creative features four portraits, each with an oval selection and a “Generate” button. When the user clicks the button, the selected portrait transforms into a Halloween-themed version while preserving the person's identity.
               </p>
               <a class="work-card__link" href="https://preview.partners.gumgum.com/161347" target="_blank" rel="noopener noreferrer" aria-label="Open the Adobe Photoshop Monster Makeover campaign in a new tab">Open campaign</a>
             </div>
           </article>
+        </div>
+
+        <div class="other-projects reveal">
+          <h3>Other Projects</h3>
+          <!-- Replace each example URL and project name below. -->
+          <ul class="other-projects__list">
+            <li><a href="https://preview.partners.gumgum.com/173045" target="_blank" rel="noopener noreferrer">HBO MAX Welcome To Derry</a></li>
+            <li><a href="https://preview.partners.gumgum.com/136364" target="_blank" rel="noopener noreferrer">Martini Fiero</a></li>
+            <li><a href="https://preview.partners.gumgum.com/173841" target="_blank" rel="noopener noreferrer">Olimpics LA 2028</a></li>
+            <li><a href="https://preview.partners.gumgum.com/174016" target="_blank" rel="noopener noreferrer">FIFA Los Angeles</a></li>
+            <li><a href="https://c.ggops.com/adbuilder/demos/44800/1778022421802_ad.html" target="_blank" rel="noopener noreferrer">Disney+ ObiWan Kenobi</a></li>
+            <li><a href="https://c.ggops.com/adbuilder/demos/78773/1778022790578_ad.html" target="_blank" rel="noopener noreferrer">Nilla</a></li>
+            <li><a href="https://preview.partners.gumgum.com/143319" target="_blank" rel="noopener noreferrer">Guitar Center</a></li>
+            <li><a href="https://preview.partners.gumgum.com/174262" target="_blank" rel="noopener noreferrer">Project Hail Mary</a></li>
+            <li><a href="https://preview.partners.gumgum.com/146339" target="_blank" rel="noopener noreferrer">Amazon Prime Day</a></li>
+            <li><a href="https://c.ggops.com/adbuilder/demos/48866/1778022486220_ad.html" target="_blank" rel="noopener noreferrer">HBO MAX House of Dragon</a></li>
+          </ul>
         </div>
       </div>
     </section>
